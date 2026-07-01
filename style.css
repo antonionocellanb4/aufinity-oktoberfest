@@ -222,6 +222,12 @@ html{font-size:62.5%}
 .timeline-item__title{font-size:2rem;font-weight:600;color:var(--color-black);flex:1;}
 .timeline-item__desc{font-size:1.6rem;color:var(--color-grey-700);line-height:1.5;flex:1.5;margin-top:0.2rem;}
 
+/* EXPECTATION */
+.expectation{padding:15rem 4rem;background:var(--color-black);display:flex;justify-content:center}
+.expectation__content{max-width:1400px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
+.expectation__title{font-size:clamp(4.5rem, 10vw, 12rem);font-weight:700;line-height:.9;letter-spacing:-.03em;color:var(--color-white);margin-bottom:4rem}
+.expectation__desc{font-size:2.4rem;line-height:1.4;color:var(--color-grey-700);max-width:900px}
+
 /* REGISTER */
 .register{display:flex;flex-wrap:wrap;background:var(--color-white)}
 .register__left{width:50%;padding:8rem 6rem;display:flex;flex-direction:column;justify-content:space-between}
@@ -333,6 +339,9 @@ html{font-size:62.5%}
   .timeline-item__content{flex-direction:column;gap:1rem;padding-top:1rem}
   .timeline-item__title{padding-top:0}
   .timeline-item__desc{padding-top:0;margin-top:0}
+  
+  .expectation{padding:8rem 2.4rem}
+  .expectation__desc{font-size:2rem}
   
   .register__left{padding:6rem 2.4rem}
   .register__title{font-size:4rem}
