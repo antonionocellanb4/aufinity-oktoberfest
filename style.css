@@ -195,6 +195,10 @@ html{font-size:62.5%}
 }
 .accordion-item__content {
   position:relative; z-index:3; display:flex; flex-direction:column; justify-content:space-between; height:100%;
+  transition: text-shadow .4s cubic-bezier(.455,.03,.515,.955);
+}
+.accordion-item:hover .accordion-item__content {
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 .accordion-item__title {
   color:var(--color-white); font-family:var(--font-head); font-size:3rem;
