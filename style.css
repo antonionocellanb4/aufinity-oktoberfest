@@ -115,7 +115,18 @@ html{font-size:62.5%}
 .destination{
   display:flex;flex-wrap:wrap;justify-content:space-between;
   padding:calc(150/var(--figma-breakpoint-2xl)*100svw) 4rem calc(150/var(--figma-breakpoint-2xl)*100svw) 4rem;
-  max-width:1400px;margin:0 auto;
+  max-width:1400px;margin:0 auto; position:relative;
+}
+.destination::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 350px;
+  background: linear-gradient(180deg, rgba(12,13,16,1) 0%, rgba(12,13,16,0) 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 .destination__left{width:45%}
 .destination__title{font-size:2rem;font-weight:400;color:var(--color-blue);margin-bottom:1.5rem}
