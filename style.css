@@ -130,7 +130,18 @@ html{font-size:62.5%}
 
 /* AGENDA */
 .agenda{padding:5rem 0 15rem 0;background:transparent}
-.agenda__content{display:flex;padding:0 4rem;max-width:1400px;margin:0 auto}
+.agenda__content {
+  display: flex;
+  padding: 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
 .agenda__day{flex:1;padding:0 6rem}
 .agenda__day:first-child{border-right:1px solid rgba(255,255,255,.1);padding-left:0}
 .agenda__day:last-child{padding-right:0}
@@ -301,7 +312,7 @@ html{font-size:62.5%}
   .hero__title{font-size:clamp(6rem, 12vw, 12rem)}
   .destination{flex-direction:column;padding:8rem 2.4rem}
   .destination__left, .destination__right{width:100%;margin-top:3rem}
-  .agenda__content{flex-direction:column;padding:0 2.4rem}
+  .agenda__content{flex-direction:column;padding:4rem 2.4rem;border-radius:2rem}
   .agenda__day{padding:4rem 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .agenda__day:last-child{border-bottom:none}
   .register{flex-direction:column}
