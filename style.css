@@ -251,7 +251,7 @@ html{font-size:62.5%}
   font-weight: 500;
   line-height: 1.2;
   color: var(--color-white);
-  max-width: 900px;
+  width: 100%;
   margin: 0 auto 2rem auto;
   letter-spacing: -.02em;
   padding: 4rem 6rem;
