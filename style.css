@@ -246,21 +246,33 @@ html{font-size:62.5%}
 .logistics{padding:15rem 4rem 8rem 4rem;display:flex;justify-content:center}
 .logistics__content{max-width:1400px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
 .logistics__label{display:block;font-size:1.6rem;font-weight:600;color:var(--color-grey-700);margin-bottom:2.5rem}
-.logistics__title {
-  font-size: 5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--color-white);
+.logistics__note {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
   width: 100%;
-  margin: 0 auto 2rem auto;
-  letter-spacing: -.02em;
-  padding: 4rem 6rem;
+  margin: 0;
+  padding: 2.5rem 3.5rem;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 3rem;
+  border-radius: 2rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.logistics__note .note-icon {
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--color-blue);
+}
+.logistics__note p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 .logistics__desc{font-size:2rem;color:var(--color-grey-700);line-height:1.4;max-width:800px}
 .logistics__timeline{width:100%;max-width:1000px;margin-top:6rem;display:flex;flex-direction:column;text-align:left}
@@ -276,7 +288,8 @@ html{font-size:62.5%}
 .logistics__huge-title{font-size:clamp(6rem, 12vw, 16rem);font-weight:700;line-height:.85;letter-spacing:-.03em;color:var(--color-white);flex:1;margin-bottom:0}
 .logistics__huge-title .huge-line2{transform:translateX(5vw)}
 .logistics__huge-title .t-blue{color:var(--color-blue)}
-.logistics__huge-desc{font-size:2.4rem;line-height:1.4;color:var(--color-grey-700);flex:1;max-width:none;padding-top:1rem}
+.logistics__right-col{flex:1;display:flex;flex-direction:column;gap:4rem;padding-top:1rem}
+.logistics__huge-desc{font-size:2.4rem;line-height:1.4;color:var(--color-grey-700);max-width:none}
 
 /* REGISTER */
 .register{display:flex;flex-wrap:wrap;background:var(--color-white)}
@@ -429,7 +442,8 @@ html{font-size:62.5%}
   
   .logistics{padding:6rem 2.4rem}
   .logistics__content{align-items:center;text-align:center}
-  .logistics__title{font-size:3.5rem; padding: 3rem 2.4rem; border-radius: 2rem}
+  .logistics__note{padding: 2.5rem; gap: 2rem;}
+  .logistics__note p{font-size: 1.8rem;}
   .timeline-item{gap:2rem}
   .timeline-item__content{flex-direction:column;gap:1rem;padding-top:1rem}
   .timeline-item__title{padding-top:0}
