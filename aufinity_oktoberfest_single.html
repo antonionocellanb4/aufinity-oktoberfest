@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Aufinity Italia @ Oktoberfest 2026 — Evento Esclusivo</title>
+  <meta name="description" content="Vivi con Aufinity Italia un'esperienza esclusiva all'Oktoberfest di Monaco. Evento dedicato a clienti, partner e professionisti dell'automotive.">
+  <link rel="icon" href="https://cdn.prod.website-files.com/655f4a8ae7674cc7cb14f8d2/655f4f9ed5db09ffa4b8a4d5_Fav.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --color-black: #101114;      /* Aufinity Woodsmoke Background */
+  --color-grey-100: #1a1b23;
+  --color-grey-300: #2b2d38;
+  --color-grey-400: #82869a;
+  --color-grey-700: #a5a9bd;
+  --color-white: #ffffff;
+  --color-blue: #009df9;       /* Aufinity Blue */
+  --color-pink: #f13d65;       /* Aufinity Pink */
+  --color-grey: #999999;
+  --color-concrete: #f2f2f2;
+  
+  --font-head: 'DM Sans', sans-serif;
+  --font-text: 'DM Sans', sans-serif;
+  
+  --figma-breakpoint-2xl: 2024;
+  --figma-breakpoint-sm: 768;
+  --figma-breakpoint-xs: 393;
+  
+  --header-height: 8rem;
+  --header-height-md: 6.5rem;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color-scheme:dark}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  background:var(--color-black);color:var(--color-white);
+  font-family:var(--font-text);font-size:1.6rem;line-height:1.4;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font-family:inherit;background:none;border:none;outline:none}
+::selection{background:rgba(0,157,249,.25)}
+html{font-size:62.5%}
+
+/* LOADER */
+.loader{position:fixed;inset:0;z-index:9999;background:var(--color-black);display:flex;align-items:center;justify-content:center}
+.loader-bar{width:36px;height:2px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.loader-bar::after{content:'';display:block;width:100%;height:100%;background:var(--color-blue);animation:lbar .65s ease-in-out infinite alternate}
+@keyframes lbar{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+
+/* HEADER */
+.header{
+  position:fixed;top:0;left:0;width:100%;height:var(--header-height);z-index:100;
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:center;
+  background:transparent;transition:background .4s, backdrop-filter .4s;
+}
+.header.is-scrolled{
+  background:rgba(12, 13, 16, 0.35);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.header__logo{
+  grid-column:span 2 / span 2;padding-left:4rem;display:flex;align-items:center;
+}
+.header__logo svg{height:2.2rem;width:auto}
+.header__logo svg *{fill:var(--color-white)}
+.header__logo svg [fill="#009df9"] { fill: var(--color-blue) !important; }
+.header__logo svg [fill="#f13d65"] { fill: var(--color-pink) !important; }
+
+.header__right{
+  grid-column:span 4 / span 4; grid-column-start: 10;
+  display:flex;align-items:center;justify-content:flex-end;height:100%;
+}
+.header__date{
+  display:flex;flex-direction:row;gap:.6rem;align-items:center;
+  font-family:var(--font-head);font-size:1.3rem;font-weight:500;
+  border-left:1px solid rgba(255,255,255,.1);padding-left:2.4rem;padding-right:2.4rem;
+  color:var(--color-white);line-height:1;height:50%;justify-content:center;
+}
+.header__button{
+  display:flex;align-items:center;justify-content:center;
+  background:var(--color-blue);color:var(--color-white);
+  height:100%;width:55%;font-size:1.4rem;font-weight:600;letter-spacing:.05em;
+  position:relative;overflow:hidden;
+}
+.header__button::before{
+  content:'';position:absolute;inset:0;background:var(--color-pink);
+  transform:scaleX(0);transform-origin:right;transition:transform .4s ease;
+}
+.header__button:hover::before{transform:scaleX(1);transform-origin:left}
+.header__button span{position:relative;z-index:2}
+
+/* HERO */
+.hero{position:relative;width:100%;height:100svh;overflow:hidden}
+.hero__image{position:absolute;inset:0;background:var(--color-black)}
+.hero__image img{width:100%;height:120%;object-fit:cover;object-position:center;top:-10%;position:relative;will-change:transform}
+.hero__overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none;background:linear-gradient(180deg, rgba(12,13,16,0.95) 0%, rgba(12,13,16,0.4) 20%, rgba(12,13,16,0.4) 77%, rgba(12,13,16,1) 95%, rgba(12,13,16,1) 100%)}
+.hero__content{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;height:100%}
+.hero__content-inner{color:var(--color-white);width:100%;padding:0 4rem;display:flex;flex-direction:column;justify-content:center}
+.hero__text-top{font-size:clamp(1.4rem, 2vw, 2.4rem);font-weight:500;letter-spacing:.2em;margin-bottom:2rem;transform:translateX(5vw)}
+.hero__title{
+  font-size:clamp(4.5rem, 14vw, 16rem);font-weight:700;line-height:.85;
+  letter-spacing:-.03em;
+}
+.hero__text1{transform:translateX(-2vw);overflow:hidden}
+.hero__text2{transform:translateX(6vw);overflow:hidden}
+.hero__title .chars{display:inline-block;will-change:transform}
+.hero__title .t-blue{color:var(--color-blue)}
+.hero__text-bottom{
+  width:100%;padding:0;
+  display:flex;justify-content:space-between;align-items:flex-end;margin-top:2rem;
+  font-size:clamp(1.4rem, 2.5vw, 2.4rem);font-weight:500;color:var(--color-white);
+}
+.hero__text-right{text-align:right}
+.hero__text-over{font-size:1.4rem;font-weight:500;color:var(--color-grey-400);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem}
+.hero__text-main{font-size:2.4rem;font-weight:700;color:var(--color-white);line-height:1.1;margin:0.2rem 0;letter-spacing:-0.02em;font-family:var(--font-head)}
+.hero__text-date-right{font-size:clamp(3.5rem, 10vw, 5.6rem);font-weight:700;color:var(--color-white);line-height:1;letter-spacing:-0.03em;font-family:var(--font-head);text-transform:uppercase}
+.hero__text-date-right .t-blue{color:var(--color-blue)}
+.hero__text-date-right .t-pink{color:var(--color-pink)}
+
+/* DESTINATION */
+.destination{
+  display:flex;flex-wrap:wrap;justify-content:space-between;
+  padding:calc(150/var(--figma-breakpoint-2xl)*100svw) 4rem calc(150/var(--figma-breakpoint-2xl)*100svw) 4rem;
+  max-width:1400px;margin:0 auto; position:relative;
+}
+.destination::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 350px;
+  background: linear-gradient(180deg, rgba(12,13,16,1) 0%, rgba(12,13,16,0) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+.destination__left{width:45%}
+.destination__title{font-size:2rem;font-weight:400;color:var(--color-blue);margin-bottom:1.5rem}
+.destination__desc{font-size:3.2rem;font-weight:500;line-height:1.2;letter-spacing:-.02em}
+.destination__right{width:45%;font-size:2.4rem;font-weight:400;line-height:1.4;color:var(--color-grey-400);margin-top:4.5rem}
+.destination__image{
+  width:100%;
+  margin-top:10rem;position:relative;display:flex;justify-content:center;
+}
+.parallax-wrap{width:100%;height:100%;position:relative;overflow:hidden}
+.parallax-img{width:100%;height:120%;object-fit:cover;position:absolute;top:-10%}
+
+/* AGENDA */
+.agenda{padding:5rem 0 15rem 0;background:transparent}
+.agenda__content {
+  display: flex;
+  padding: 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.agenda__day{flex:1;padding:0 6rem}
+.agenda__day:first-child{border-right:1px solid rgba(255,255,255,.1);padding-left:0}
+.agenda__day:last-child{padding-right:0}
+.agenda__day-title{font-size:2rem;color:var(--color-blue);font-weight:500;margin-bottom:3rem}
+.agenda__day-note{font-size:3.2rem;font-weight:400;line-height:1.2;color:var(--color-white)}
+.agenda__item{display:flex;align-items:center;padding:3rem 0;position:relative}
+.agenda__line{position:absolute;top:0;left:0;width:100%;height:1px;background:rgba(255,255,255,.1);transform-origin:left;transform:scaleX(0)}
+.agenda__line-bottom{position:absolute;bottom:0;left:0;width:100%;height:1px;background:rgba(255,255,255,.1);transform-origin:left;transform:scaleX(0)}
+.agenda__label{width:12rem;font-size:1.6rem;color:var(--color-grey-400);font-weight:500}
+.agenda__val{flex:1;font-size:2rem;font-weight:500;line-height:1.3;color:var(--color-white)}
+
+/* SENTENCE */
+.sentence{
+  position:relative;padding:20rem 4rem 4rem 4rem;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;
+}
+.sentence__image{position:absolute;inset:0}
+.parallax-img-fast{width:100%;height:140%;object-fit:cover;position:absolute;top:-20%}
+.sentence__overlay{position:absolute;inset:0;background:rgba(12,13,16,.75)}
+.sentence__content{
+  position:relative;z-index:2;font-size:clamp(4rem, 7vw, 10rem);
+  font-weight:500;line-height:1;letter-spacing:-.02em;color:var(--color-white);
+  max-width:1200px;
+}
+.way-svg-wrapper{
+  position:relative;z-index:2;width:100%;
+}
+.way-svg{width:100%;height:auto}
+
+/* INTRO */
+.intro{padding:4rem 4rem 12rem 4rem;display:flex;justify-content:center}
+.intro__content{max-width:1000px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.intro__desc{font-size:3.2rem;line-height:1.4;color:var(--color-grey-700);font-weight:400;margin-bottom:5rem;letter-spacing:-.02em}
+.intro__desc strong{font-weight:500;color:var(--color-blue)}
+.intro__button{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:2rem 5rem;background:var(--color-blue);color:var(--color-white);
+  font-family:var(--font-head);font-size:1.6rem;font-weight:500;
+  text-decoration:none;transition:background .3s;
+}
+.intro__button:hover{background:var(--color-pink)}
+
+/* LIST SECTION */
+/* ACCORDION (Cosa ti aspetta) */
+.accordion { overflow:hidden; position:relative; display:flex; width:100%; }
+.accordion__items { display:flex; width:100%; height:calc(800/var(--figma-breakpoint-2xl)*100svw); min-height:500px; }
+.accordion-item {
+  cursor:pointer; display:flex; flex:1 1 33.333%; flex-direction:column;
+  justify-content:space-between; overflow:hidden; padding:4rem;
+  position:relative; transition:flex .4s cubic-bezier(.455,.03,.515,.955);
+}
+.accordion-item__image {
+  height:100%; left:50%; object-fit:cover; position:absolute; top:0;
+  transform:translate(-50%); width:100vw; z-index:1;
+}
+.accordion-item__overlay {
+  background-color:rgba(12,13,16,0.5); height:100%; left:0; position:absolute;
+  top:0; transition:background-color .4s cubic-bezier(.455,.03,.515,.955); width:100%; z-index:2;
+}
+.accordion-item__overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 70%;
+  background: linear-gradient(to top, rgba(12,13,16,0.95) 0%, rgba(12,13,16,0) 100%);
+  opacity: 0;
+  transition: opacity .4s cubic-bezier(.455,.03,.515,.955);
+}
+.accordion-item:hover .accordion-item__overlay {
+  background-color:rgba(12,13,16,0.1);
+}
+.accordion-item:hover .accordion-item__overlay::after {
+  opacity: 1;
+}
+.accordion-item__content {
+  position:relative; z-index:3; display:flex; flex-direction:column; justify-content:space-between; height:100%;
+}
+.accordion-item__title {
+  color:var(--color-white); font-family:var(--font-head); font-size:3rem;
+  font-weight:500;
+}
+.accordion-item__description {
+  color:var(--color-white); font-size:1.8rem; line-height:1.4; max-width:40rem;
+  opacity:0; transform:translateY(20px);
+  transition:all .4s cubic-bezier(.455,.03,.515,.955); font-weight:400;
+}
+.accordion-item:hover { flex:1 0 50%; }
+.accordion-item:hover .accordion-item__description { opacity:1; transform:translateY(0); }
+
+/* LOGISTICS */
+.logistics{padding:15rem 4rem 8rem 4rem;display:flex;justify-content:center}
+.logistics__content{max-width:1400px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
+.logistics__label{display:block;font-size:1.6rem;font-weight:600;color:var(--color-grey-700);margin-bottom:2.5rem}
+.logistics__note {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 2.5rem 3.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.logistics__note .note-icon {
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--color-blue);
+}
+.logistics__note p {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.logistics__desc{font-size:2rem;color:var(--color-grey-700);line-height:1.4;max-width:800px}
+.logistics__timeline{width:100%;max-width:1000px;margin-top:6rem;display:flex;flex-direction:column;text-align:left}
+.timeline-item{display:flex;gap:4rem;position:relative;min-height:12rem}
+.timeline-item__indicator{display:flex;flex-direction:column;align-items:center;width:60px;flex-shrink:0}
+.timeline-item__circle{width:60px;height:60px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:500;color:var(--color-white);z-index:2;background:var(--color-black)}
+.timeline-item__line{width:1px;flex-grow:1;background:rgba(255,255,255,.15);margin-top:-1px}
+.timeline-item__content{display:flex;flex:1;gap:4rem;padding-top:1.8rem}
+.timeline-item__title{font-size:2rem;font-weight:600;color:var(--color-white);flex:1;}
+.timeline-item__desc{font-size:1.6rem;color:var(--color-grey-700);line-height:1.5;flex:1.5;margin-top:0.2rem;}
+
+.logistics__top{margin-bottom:15rem;display:flex;align-items:flex-start;justify-content:space-between;width:100%;gap:6rem;text-align:left}
+.logistics__huge-title{font-size:clamp(6rem, 12vw, 16rem);font-weight:700;line-height:.85;letter-spacing:-.03em;color:var(--color-white);flex:1;margin-bottom:0}
+.logistics__huge-title .huge-line2{transform:translateX(5vw)}
+.logistics__huge-title .t-blue{color:var(--color-blue)}
+.logistics__right-col{flex:1;display:flex;flex-direction:column;gap:4rem;padding-top:1rem}
+.logistics__huge-desc{font-size:2.4rem;line-height:1.4;color:var(--color-grey-700);max-width:none}
+
+/* REGISTER */
+.register{display:flex;flex-wrap:wrap;background:var(--color-white)}
+.register__left{width:50%;padding:8rem 6rem;display:flex;flex-direction:column;justify-content:space-between}
+.register__title{font-size:5.6rem;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:2rem;color:var(--color-black)}
+.register__desc{font-size:1.8rem;color:var(--color-grey-700);line-height:1.4;margin-bottom:6rem;width:80%}
+.register__right{width:50%;position:relative;overflow:hidden;background:var(--color-blue);display:flex;align-items:flex-end;justify-content:flex-end;padding:8rem}
+.register__arrow{width:250px;height:250px;color:var(--color-black);margin-bottom:2rem;transform:rotate(135deg);display:block;margin-left:auto}
+.register__overlay{text-align:right;z-index:2}
+.register__overlay p{font-size:3.2rem;font-weight:500;line-height:1.1;margin-bottom:1rem;color:var(--color-black)}
+.register__overlay span{font-size:1.6rem;color:var(--color-white);font-weight:500}
+
+/* FORM */
+.form-grid{display:flex;flex-direction:column;gap:2rem;margin-bottom:3rem}
+.input-line{position:relative}
+.input-line input, .input-line textarea{
+  width:100%;padding:1.5rem 0;font-size:1.8rem;color:var(--color-black);
+  border-bottom:1px solid rgba(0,0,0,.2);transition:border-color .3s;
+}
+.input-line input::placeholder, .input-line textarea::placeholder{color:var(--color-grey-400)}
+.input-line input:focus, .input-line textarea:focus{border-color:var(--color-blue)}
+.input-line textarea{resize:vertical;min-height:40px}
+.input-radio{padding:1.5rem 0;border-bottom:1px solid rgba(0,0,0,.2);display:flex;align-items:center;justify-content:space-between}
+.input-radio label{font-size:1.8rem;color:var(--color-black)}
+.radio-group{display:flex;gap:2rem}
+.radio-group label{color:var(--color-black);display:flex;align-items:center;gap:1rem;cursor:pointer}
+.radio-group input{accent-color:var(--color-blue);width:1.8rem;height:1.8rem}
+.form-check{display:flex;align-items:flex-start;gap:1.5rem;cursor:pointer;margin-bottom:4rem}
+.form-check input{display:none}
+.check-box{
+  width:2rem;height:2rem;border:1px solid rgba(0,0,0,.3);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;transition:all .3s;
+}
+.form-check input:checked + .check-box{background:var(--color-blue);border-color:var(--color-blue)}
+.form-check input:checked + .check-box::after{content:'✓';font-size:1.2rem;color:#fff}
+.check-lbl{font-size:1.4rem;color:var(--color-grey-700);line-height:1.4}
+.form-btn{
+  display:inline-flex;padding:2rem 4rem;background:var(--color-black);color:var(--color-white);
+  font-size:1.6rem;font-weight:600;cursor:pointer;transition:transform .3s;
+}
+.form-btn:hover{transform:translateY(-2px);background:var(--color-blue)}
+.form-ok{display:none;padding:4rem 0;text-align:center}
+.form-ok h3{font-size:3.2rem;color:var(--color-blue);margin-bottom:1rem}
+.form-ok p{font-size:1.8rem;color:var(--color-grey-400)}
+.form-el.gone{display:none}
+
+/* FOOTER */
+.footer{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:5rem 6rem;border-top:1px solid rgba(255,255,255,.05);
+}
+.footer__left{display:flex;align-items:center;gap:3rem}
+.footer__left svg{height:2rem}
+.footer__left svg *{fill:var(--color-white) !important}
+.footer__left span{color:var(--color-grey-400);font-size:1.4rem}
+.footer__right{display:flex;gap:3rem;font-size:1.4rem;color:var(--color-grey-400)}
+.footer__right a{transition:color .3s}
+.footer__right a:hover{color:var(--color-white)}
+
+/* AMBIENT GLOW */
+.ambient-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ambient-glow__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  animation: orb-float 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ambient-glow__orb--grey {
+  background: var(--color-grey);
+  width: 50vw;
+  height: 50vh;
+  top: -10vh;
+  left: -10vw;
+  animation-delay: 0s;
+}
+.ambient-glow__orb--concrete {
+  background: var(--color-concrete);
+  width: 45vw;
+  height: 45vh;
+  bottom: -10vh;
+  right: -10vw;
+  animation-duration: 25s;
+  animation-delay: -5s;
+}
+
+@keyframes orb-float {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(15vw, 20vh) scale(1.1); }
+  66% { transform: translate(-10vw, 15vh) scale(0.9); }
+  100% { transform: translate(5vw, -15vh) scale(1.05); }
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .header{height:var(--header-height-md);display:flex;justify-content:space-between;align-items:center}
+  .header__logo{padding-left:2rem}
+  .header__right{display:flex;width:auto;height:100%}
+  .header__button{width:auto;padding:0 3rem}
+  .header__date{padding-left:1.5rem;padding-right:1.5rem}
+  .hero__title{font-size:clamp(6rem, 12vw, 12rem)}
+  .destination{flex-direction:column;padding:8rem 2.4rem}
+  .destination__left, .destination__right{width:100%;margin-top:3rem}
+  .agenda__content{flex-direction:column;padding:4rem 2.4rem;border-radius:2rem}
+  .agenda__day{padding:4rem 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .agenda__day:last-child{border-bottom:none}
+  .register{flex-direction:column}
+  .register__left, .register__right{width:100%;padding:4rem 2.4rem}
+  .register__right{aspect-ratio:1/1}
+  .footer{flex-direction:column;gap:3rem;text-align:center}
+}
+
+@media(max-width:768px){
+  .header__logo{padding-left:1.5rem}
+  .header__logo svg{height:2.6rem}
+  .header__date{flex-direction:column;gap:0;padding-left:1rem;padding-right:1rem;font-size:1.1rem;text-align:center}
+  .header__button{padding:0 1.5rem;font-size:1.2rem}
+  
+  .hero__content-inner{padding:0 2.4rem}
+  .hero__text-top{transform:translateX(0);margin-bottom:1rem}
+  .hero__text1, .hero__text2{transform:translateX(0)}
+  .hero__text-bottom{flex-direction:column;align-items:flex-start;gap:2rem}
+  .hero__text-right{text-align:left}
+  
+  .destination{padding:5rem 2.4rem}
+  .destination__desc{font-size:2.4rem}
+  .destination__right{margin-top:2rem;font-size:2rem}
+  
+  .sentence{padding:8rem 2.4rem 4rem 2.4rem}
+  .sentence__content{font-size:clamp(3.5rem, 8vw, 10rem)}
+  
+  .intro{padding:4rem 2.4rem 6rem 2.4rem}
+  .intro__desc{font-size:2.2rem;margin-bottom:3rem}
+  
+  .agenda{padding-top:0}
+  
+  .accordion__items{flex-direction:column;height:auto}
+  .accordion-item{min-height:350px;flex:none;width:100%}
+  .accordion-item:hover{flex:none}
+  .accordion-item__description{opacity:1;transform:translateY(0)}
+  
+  .logistics{padding:6rem 2.4rem}
+  .logistics__content{align-items:center;text-align:center}
+  .logistics__note{padding: 2.5rem; gap: 2rem;}
+  .logistics__note p{font-size: 1.8rem;}
+  .timeline-item{gap:2rem}
+  .timeline-item__content{flex-direction:column;gap:1rem;padding-top:1rem}
+  .timeline-item__title{padding-top:0}
+  .timeline-item__desc{padding-top:0;margin-top:0}
+  
+  .logistics__top{margin-bottom:8rem;flex-direction:column;gap:3rem}
+  .logistics__huge-title{font-size:clamp(6rem, 12vw, 12rem)}
+  .logistics__huge-title .huge-line2{transform:translateX(0)}
+  .logistics__huge-desc{font-size:2rem}
+  
+  .register__left{padding:6rem 2.4rem}
+  .register__title{font-size:4rem}
+  .register__right{aspect-ratio:auto;padding:6rem 2.4rem;align-items:flex-start;justify-content:flex-end;flex-direction:column}
+  .register__arrow{width:150px;height:150px;margin-left:0;margin-bottom:2rem}
+  .register__overlay{text-align:left}
+}
+
+</style>
+</head>
+<body>
+
+<!-- AMBIENT GLOW -->
+<div class="ambient-glow">
+  <div class="ambient-glow__orb ambient-glow__orb--grey"></div>
+  <div class="ambient-glow__orb ambient-glow__orb--concrete"></div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="https://www.aufinity.com/it" class="header__logo" aria-label="Aufinity">
+    <!-- SVG Logo -->
+    <svg viewBox="0 0 240.67 36.19" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <path d="M101.53,21.75v-11.5h4.25v-3.44h-4.25V.05h-4.32v6.71h-2.06v3.44h2.06v12.27c0,3.71,1.87,5.44,5.76,5.44h2.92v-3.46h-1.51c-2.05,0-2.84-.76-2.84-2.7Z"/>
+        <path d="M44.37,5.51v1.22h-2v3.44h2v17.76h4.32V10.17h4.32v-3.44h-4.32v-.5c0-1.94.79-2.7,2.84-2.7h1.51V.07h-2.92c-3.89,0-5.76,1.73-5.76,5.44Z"/>
+        <rect x="56.65" y="6.76" width="4.39" height="21.18"/>
+        <rect x="56.65" y=".08" width="4.39" height="3.47"/>
+        <rect x="87.12" y="6.76" width="4.39" height="21.18"/>
+        <rect x="87.12" y=".07" width="4.39" height="3.47"/>
+        <path d="M34.43,21.8c0,1.94-.79,2.69-2.83,2.69h-2.99c-2.04,0-2.83-.75-2.83-2.69l-.04-14.99h-4.27v15.7c0,3.69,1.86,5.41,5.74,5.41h5.79c3.87,0,5.74-1.72,5.74-5.41V6.82h-4.27l-.04,14.99Z"/>
+        <path d="M76.97,6.82h-5.79c-3.87,0-5.74,1.72-5.74,5.41v15.7h4.27l.04-14.99c0-1.94.79-2.69,2.83-2.69h2.99c2.04,0,2.83.75,2.83,2.69l.04,14.99h4.27v-15.7c0-3.69-1.86-5.41-5.74-5.41Z"/>
+        <path d="M126.68,6.77h-4.26l-.02,14.96c0,1.61-.44,2.71-2.85,2.71,0,0-3.01,0-3.36,0-1.78,0-2.47-.86-2.47-2.68l-.03-14.98h-4.27v15.7c0,.73.07,1.38.23,1.96.59,2.34,2.41,3.45,5.51,3.45h7.26v1.73c0,1.95-.48,3.17-3.23,3.17h-8.01v3.45h9.73c.55,0,1.05-.05,1.51-.14,3.19-.59,4.26-3.07,4.29-6.48v-1.73s-.03-21.11-.03-21.11Z"/>
+        <path d="M17.83,23.74v-11.5c0-3.7-1.8-5.46-5.61-5.46H1.51s0,3.45,0,3.45h9.3c2.01,0,2.83.75,2.83,2.69v2.73c-.28-.17-.75-.25-1.41-.25h-6.63c-.3,0-.6,0-.88.04-1.93.13-3.24.75-3.99,1.91-.53.81-.78,1.89-.78,3.26v1.87c0,3.74,1.8,5.46,5.65,5.46h7c.92,0,1.89-.53,2.39-1.44v1.44h2.89l-.04-4.2ZM13.64,21.91c0,.39-.03.72-.1,1.01-.27,1.12-1.07,1.57-2.73,1.57h-3.84c-2.05,0-2.79-.71-2.79-2.58v-.47c0-.85.16-1.47.53-1.89.42-.49,1.15-.7,2.26-.7h5.65c.49,0,.81.04,1.02.15v2.91Z"/>
+      </g>
+      <g>
+        <rect fill="#009df9" x="154.16" y="13.79" width="4.08" height="17.99" rx="2.02" ry="2.02" transform="translate(59.58 -102.04) rotate(43.96)"/>
+        <rect fill="#009df9" x="139.48" y="-.36" width="4.08" height="17.99" rx="2.02" ry="2.02" transform="translate(45.64 -95.82) rotate(43.96)"/>
+        <rect fill="#f13d65" x="146.82" y="-1.99" width="4.08" height="35.4" rx="2.02" ry="2.02" transform="translate(52.61 -98.93) rotate(43.96)"/>
+      </g>
+      <g>
+        <path d="M169.54,22.51v-10.29c0-3.74,1.83-5.47,5.76-5.47h6.66c3.89,0,5.76,1.73,5.76,5.47,0,.25,0,.73-.04.87h-4.28v-.22c0-1.91-.83-2.66-2.88-2.66h-3.82c-2.05,0-2.84.79-2.84,2.7v8.89c0,1.94.79,2.7,2.84,2.7h3.82c2.05,0,2.88-.76,2.88-2.63v-.25l4.28.06c.04.18.04.59.04.84,0,3.71-1.87,5.44-5.76,5.44h-6.66c-3.92,0-5.76-1.73-5.76-5.44Z"/>
+        <path d="M234.91,6.71h-2.38c-2.56,0-3.78.72-4.54,2.27-.86-1.55-2.52-2.27-5.04-2.27h-4.75c-3.92,0-5.76,1.73-5.76,5.47v15.72h4.28v-15.04c0-1.91.83-2.7,2.88-2.7h1.91c2.05,0,2.88.79,2.88,2.7v15.04h4.28v-15.04c0-1.91.83-2.7,2.88-2.7h1.94c2.05,0,2.88.79,2.88,2.7v15.04h4.28v-15.72c0-3.74-1.84-5.47-5.76-5.47Z"/>
+        <path d="M191.35,22.47v-10.28c0-3.74,1.72-5.46,5.4-5.46h6.69c3.65,0,5.37,1.73,5.37,5.46v10.28c0,3.7-1.72,5.43-5.37,5.43h-6.69c-3.68,0-5.4-1.73-5.4-5.43ZM202.09,24.45c1.93,0,2.7-.75,2.7-2.69v-8.88c0-1.9-.78-2.69-2.7-2.69h-4.02c-1.93,0-2.67.79-2.67,2.69v8.88c0,1.94.74,2.69,2.67,2.69h4.02Z"/>
+      </g>
+    </svg>
+  </a>
+  <div class="header__right">
+    <div class="header__date">
+      <span>22 Settembre</span>
+      <span>2026</span>
+    </div>
+    <a href="#registrazione" class="header__button">
+      <span>REGISTRATI</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__image">
+      <img src="https://raw.githubusercontent.com/antonionocellanb4/aufinity-oktoberfest/main/assets/her2.webp" alt="Aufinity Oktoberfest" data-speed="auto">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__content-inner">
+        <div class="hero__text-top gs-reveal">AUFINITY ITALIA</div>
+        <h1 class="hero__title">
+          <div class="hero__text1"><span class="chars">OKTOBER</span></div>
+          <div class="hero__text2"><span class="chars t-blue">FEST</span><span class="chars">_26</span></div>
+        </h1>
+        <div class="hero__text-bottom">
+          <div class="hero__text-date gs-reveal">MONACO DI BAVIERA — THERESIENWIESE</div>
+          <div class="hero__text-right gs-reveal">
+            <div class="hero__text-date-right"><span class="t-pink">22</span>_SETTEMBRE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATION -->
+  <section class="destination" id="esperienza">
+    <div class="destination__left">
+      <h2 class="destination__title gs-fade">L'esperienza</h2>
+      <p class="destination__desc gs-fade">Un momento esclusivo dedicato ai professionisti dell'automotive italiano.</p>
+    </div>
+    <div class="destination__right gs-fade">
+      Vivi con <strong>Aufinity Italia</strong> un'esperienza esclusiva all'Oktoberfest di Monaco.<br><br>Un'occasione speciale per incontrare il team in un contesto conviviale e ad alto valore relazionale, pensato per creare relazioni e condividere visioni.
+    </div>
+    <div class="destination__image">
+      <div class="way-svg-wrapper gs-fade-up">
+        <svg viewBox="0 0 530 130" class="way-svg" aria-label="Aufinity way">
+          <g stroke="currentColor" stroke-width="7.5" stroke-linecap="round" fill="none">
+            <!-- Person 1 (cut off left) -->
+            <g transform="translate(-36.5, 18) scale(0.93)" stroke-width="8.06">
+              <circle cx="50" cy="35" r="22"/>
+              <path d="M 15 110 A 35 35 0 0 1 85 110"/>
+            </g>
+            <!-- Plus 1 -->
+            <path d="M 53 75 L 73 75 M 63 65 L 63 85"/>
+            
+            <!-- Beer Mug (Noun Project Style) -->
+            <g transform="translate(66, 10)" stroke-linejoin="round">
+              <path d="M 25 60 L 25 100 A 10 10 0 0 0 35 110 L 65 110 A 10 10 0 0 0 75 100 L 75 60" />
+              <path d="M 20 60 L 35 60 L 35 85 A 7.5 7.5 0 0 0 50 85 L 50 60 L 80 60 C 80 45, 75 35, 65 40 C 65 20, 35 20, 35 40 C 25 35, 20 45, 20 60 Z" />
+              <path d="M 75 65 L 90 65 A 10 10 0 0 1 100 75 L 100 85 A 10 10 0 0 1 90 95 L 75 95" />
+            </g>
+            <!-- Plus 2 -->
+            <path d="M 179 75 L 199 75 M 189 65 L 189 85"/>
+            
+            <!-- Pretzel -->
+            <g transform="translate(183, 2) scale(1.4)" fill="currentColor" stroke="none">
+              <path d="M58.48,47.08c-0.16,2.03-0.8,4.12-1.9,6.2c-0.41,0.78-0.91,1.58-1.46,2.37c-0.8-0.79-1.53-1.58-2.18-2.37     c-0.9-1.1-1.64-2.19-2.22-3.26c0.01-0.02,0.02-0.03,0.03-0.05c0.28-0.55,0.79-1.56,1.02-3.16c0.27-1.9,0.07-4.12-0.59-6.59     l-0.01-0.04c-0.54-1.58-1.5-3.29-2.72-4.8c-1.13-1.4-2.36-2.51-3.39-3.04c-0.44-0.23-0.94-0.42-1.6-0.63     c-1.21-0.38-2.51-0.58-3.85-0.58c-4.79,0-9.09,2.42-11.49,6.47c-1.92,3.24-2.36,6.74-1.3,10.39c1.33,4.57,4.96,9.17,10.26,13     c-2.34,1.46-5.26,3.26-6.27,3.86c-5.38-4.42-9.05-9.58-10.6-14.94c-1.59-5.48-0.9-10.95,1.99-15.82     c1.22-2.05,2.77-3.85,4.61-5.34c1.75-1.41,3.71-2.52,5.85-3.29c4.18-1.51,8.75-1.62,12.87-0.31c1.61,0.51,3.12,1.22,4.51,2.13     l0.03,0.02c0.02,0.01,2.54,1.48,5.59,5.86c1.06,1.79,1.85,3.79,2.33,5.96C58.53,41.57,58.7,44.25,58.48,47.08z"/>
+              <path d="M76.68,73.59c-0.5,1.33-1.8,2.23-3.22,2.23c-0.41,0-0.82-0.07-1.21-0.22c-0.2-0.08-5.06-1.91-10.78-5.19l-0.03-0.01     c-3.32-1.7-8.25-5.56-8.39-5.67c-1.05-0.85-2.05-1.73-2.95-2.6l-0.02-0.01c-5.69-5.16-8.56-10.94-8.54-17.18     c0.01-3.32,0.87-6.09,1.59-7.83c0.74-1.79,1.51-2.93,1.8-3.29c1.41,0.96,3.22,3.04,4.34,5.3c-1.41,2.55-1.77,5.27-1.09,8.07     c0.56,2.27,1.81,4.6,3.72,6.94c2.21,2.69,5.25,5.34,9.04,7.88l0.08,0.06c0.22,0.14,5.36,3.5,7.98,4.58     c3.29,1.63,5.63,2.52,5.65,2.53c0.86,0.32,1.54,0.96,1.92,1.8C76.97,71.8,77,72.73,76.68,73.59z"/>
+              <path d="M79.49,51.48c-1.3,3.89-3.64,7.54-6.96,10.85c-0.19,0.19-0.37,0.38-0.56,0.56c-0.85,0.86-1.66,1.67-2.64,2.44     c-1.91-0.83-5.16-2.85-6.7-3.83c2.48-1.63,4.6-3.46,6.32-5.44c1.88-2.16,3.23-4.43,4.01-6.77c1.34-4.02,0.99-8.01-1.05-11.84     c-2.58-4.83-8.55-7.43-13.9-6.04c-0.54,0.14-1.07,0.32-1.58,0.54c-2.04-2.85-3.84-4.45-4.85-5.22c1.45-0.88,3.02-1.54,4.7-1.97     c3.99-1.04,8.36-0.7,12.28,0.95c1.97,0.83,3.77,1.96,5.35,3.36c1.66,1.47,3.03,3.2,4.06,5.15c1.47,2.76,2.34,5.66,2.58,8.61     C80.8,45.73,80.44,48.64,79.49,51.48z"/>
+              <path d="M48.65,62.58c-0.78,0.67-1.62,1.35-2.48,2.02c-0.16,0.12-4.82,3.61-8.1,5.52l-0.01,0.01c-5.4,3.28-9.82,5.3-10,5.39     c-0.45,0.21-0.93,0.31-1.43,0.31c-1.34,0-2.57-0.79-3.13-2.01c-0.38-0.84-0.41-1.77-0.09-2.63c0.32-0.86,0.96-1.55,1.79-1.93     c0.02-0.01,2.45-1.13,5.85-3.02l0,0c0.32-0.17,1.59-0.93,7.56-4.64l0.02-0.02c2.06-1.41,3.92-2.83,5.53-4.21     C45.39,59.17,46.89,60.92,48.65,62.58z"/>
+              <path d="M59.7,70.95c-3.12,1.32-6.51,2.05-9.65,2.08c-3.32,0.03-7.32-0.84-10.47-2.26c2.8-1.72,6.12-4.15,7.11-4.89     c0.96,0.18,2.07,0.27,3.17,0.27c0.9,0,1.81-0.06,2.63-0.19C53.45,66.71,56.82,69.28,59.7,70.95z"/>
+            </g>
+            <!-- Equals -->
+            <path d="M 310 68 L 330 68 M 310 82 L 330 82"/>
+          </g>
+          <!-- Text -->
+          <text x="345" y="60" font-family="var(--font-head)" font-size="38" font-weight="700" fill="currentColor" letter-spacing="-0.02em">Aufinity</text>
+          <text x="345" y="104" font-family="var(--font-head)" font-size="38" font-weight="700" fill="currentColor" letter-spacing="-0.02em">networking</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- AGENDA (Details) -->
+  <section class="agenda" id="dettagli">
+    <div class="agenda__content">
+      <div class="agenda__day">
+        <h3 class="agenda__day-title gs-fade">AGENDA</h3>
+        <p class="agenda__day-note gs-fade">I dettagli organizzativi della tua partecipazione.</p>
+      </div>
+      <div class="agenda__day">
+        <div class="agenda__item gs-line">
+          <div class="agenda__line"></div>
+          <div class="agenda__label">Data</div>
+          <div class="agenda__val">Martedì 22 Settembre 2026</div>
+        </div>
+        <div class="agenda__item gs-line">
+          <div class="agenda__line"></div>
+          <div class="agenda__label">Orario</div>
+          <div class="agenda__val">Dalle ore 16:00</div>
+        </div>
+        <div class="agenda__item gs-line">
+          <div class="agenda__line"></div>
+          <div class="agenda__label">Location</div>
+          <div class="agenda__val">Oktoberfest München<br>Theresienwiese, 80336 Monaco di Baviera</div>
+        </div>
+        <div class="agenda__item gs-line">
+          <div class="agenda__line"></div>
+          <div class="agenda__line-bottom"></div>
+          <div class="agenda__label">Partecipazione</div>
+          <div class="agenda__val">Evento su invito dedicato ai clienti Aufinity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SENTENCE (Dealer / Parallax) -->
+  <section class="sentence" id="iniziativa">
+    <h2 class="sentence__content gs-blur-scroll">
+      Un'esperienza dedicata ai nostri dealer italiani.
+    </h2>
+
+  </section>
+
+
+  <!-- INTRO TEXT -->
+  <section class="intro">
+    <div class="intro__content">
+      <p class="intro__desc">
+        Quest'anno l'iniziativa nasce come evento esclusivo di <strong>Aufinity Italia</strong>, dedicato ai clienti e ai professionisti italiani del mondo dealer. Nella cornice dell'Oktoberfest di Monaco, Aufinity crea un momento di incontro pensato per rafforzare relazioni, condividere visioni e accompagnare l'evoluzione del settore automotive italiano.
+      </p>
+      <a href="#registrazione" class="intro__button">Registrati subito</a>
+    </div>
+  </section>
+
+  <!-- ACCORDION (Cosa ti aspetta) -->
+  <section class="accordion" id="programma">
+    <div class="accordion__items">
+      <div class="accordion-item">
+        <img src="https://raw.githubusercontent.com/antonionocellanb4/aufinity-oktoberfest/main/assets/networking-qualificato.webp" alt="Networking" class="accordion-item__image">
+        <div class="accordion-item__overlay"></div>
+        <div class="accordion-item__content">
+          <div class="accordion-item__title">Networking Qualificato</div>
+          <div class="accordion-item__description">Incontra dealer, clienti e professionisti italiani in un contesto riservato e informale.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <img src="https://raw.githubusercontent.com/antonionocellanb4/aufinity-oktoberfest/main/assets/esperienza-aufinity-italia.webp" alt="Esperienza" class="accordion-item__image">
+        <div class="accordion-item__overlay"></div>
+        <div class="accordion-item__content">
+          <div class="accordion-item__title">Esperienza Aufinity Italia</div>
+          <div class="accordion-item__description">Condividi una giornata con il team Aufinity e scopri la visione che guida i pagamenti digitali.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <img src="https://raw.githubusercontent.com/antonionocellanb4/aufinity-oktoberfest/main/assets/una-cornice-iconica.webp" alt="Programma" class="accordion-item__image">
+        <div class="accordion-item__overlay"></div>
+        <div class="accordion-item__content">
+          <div class="accordion-item__title">Una Cornice Iconica</div>
+          <div class="accordion-item__description">Vivi l'atmosfera dell'Oktoberfest di Monaco, nel cuore della Theresienwiese, all'interno di un'esperienza organizzata per accogliere la community italiana Aufinity.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGISTICS -->
+  <section class="logistics">
+    <div class="logistics__content">
+      <div class="logistics__top gs-fade">
+        <h2 class="logistics__huge-title">
+          <div class="huge-line1">Cosa ti</div>
+          <div class="huge-line2"><span class="t-blue">aspetta</span></div>
+        </h2>
+        <div class="logistics__right-col">
+          <p class="logistics__huge-desc">Un momento di accoglienza a partire dalle ore 16:00, seguito dall'esperienza all'Oktoberfest insieme al team Aufinity Italia. Durante l'evento avrai l'opportunità di confrontarti con altri protagonisti del settore, rafforzare relazioni professionali e vivere una serata conviviale in uno dei contesti più riconoscibili al mondo.</p>
+          <div class="logistics__note gs-fade">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="note-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <p>Le spese di viaggio sono a carico del partecipante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER (Split Screen) -->
+  <section class="register" id="registrazione">
+    <div class="register__left">
+      <div>
+        <h2 class="register__title gs-fade">Conferma la tua presenza.</h2>
+        <p class="register__desc gs-fade">Compila il form per registrarti all'evento esclusivo Aufinity Italia @ Oktoberfest 2026.<br><br>I posti sono limitati e la partecipazione è riservata agli ospiti invitati. Dopo l'invio della richiesta, il team Aufinity ti contatterà per confermare la partecipazione e condividere tutti i dettagli organizzativi.<br><br>Registrati subito per riservare il tuo posto.</p>
+      </div>
+
+      <form id="reg" class="form-el" novalidate>
+        <div class="form-grid">
+          <div class="input-line gs-fade"><input type="email" id="fe" name="email" placeholder="E-mail aziendale *" required></div>
+          <div class="input-line gs-fade"><input id="fn" name="nome" placeholder="Nome *" required></div>
+          <div class="input-line gs-fade"><input id="fc" name="cognome" placeholder="Cognome *" required></div>
+          <div class="input-line gs-fade"><input id="fa" name="azienda" placeholder="Azienda *" required></div>
+          <div class="input-line gs-fade"><input id="fr" name="ruolo" placeholder="Ruolo aziendale *" required></div>
+          <div class="input-line gs-fade"><input type="tel" id="ft" name="tel" placeholder="Telefono *" required></div>
+          
+          <div class="input-radio gs-fade">
+            <label>Abbigliamento tradizionale bavarese? *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="abbigliamento" value="Sì" required> Sì</label>
+              <label><input type="radio" name="abbigliamento" value="No" required> No</label>
+            </div>
+          </div>
+
+          <div class="input-line full gs-fade">
+            <textarea id="fno" name="note" rows="1" placeholder="Note logistico/alimentari..."></textarea>
+          </div>
+        </div>
+
+        <label class="form-check gs-fade" for="fp">
+          <input type="checkbox" id="fp" name="privacy" required>
+          <span class="check-box"></span>
+          <span class="check-lbl">Ho letto e accetto l'informativa sulla privacy. Autorizzo il trattamento dei dati per la gestione dell'evento. *</span>
+        </label>
+
+        <button type="submit" class="form-btn gs-fade" id="sbtn"><span>Invia la registrazione</span></button>
+      </form>
+
+      <div class="form-ok" id="fok">
+        <h3>Registrazione inviata!</h3>
+        <p>Grazie. Il team Aufinity ti contatterà presto per confermare la tua partecipazione e organizzare i dettagli.</p>
+      </div>
+    </div>
+    <div class="register__right gs-fade">
+      <div class="register__overlay">
+        <svg class="register__arrow" viewBox="0 0 62.8 62.8" fill="none" stroke="currentColor" stroke-width="4">
+          <path d="M0,31.4h60M30,1.4l30,30-30,30"/>
+        </svg>
+        <p>Non vediamo l'ora di festeggiare insieme a te.</p>
+        <span>— Il team Aufinity Italia</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__left">
+    <a href="https://www.aufinity.com/it" aria-label="Aufinity">
+      <svg viewBox="0 0 240.67 36.19" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path d="M101.53,21.75v-11.5h4.25v-3.44h-4.25V.05h-4.32v6.71h-2.06v3.44h2.06v12.27c0,3.71,1.87,5.44,5.76,5.44h2.92v-3.46h-1.51c-2.05,0-2.84-.76-2.84-2.7Z"/>
+          <path d="M44.37,5.51v1.22h-2v3.44h2v17.76h4.32V10.17h4.32v-3.44h-4.32v-.5c0-1.94.79-2.7,2.84-2.7h1.51V.07h-2.92c-3.89,0-5.76,1.73-5.76,5.44Z"/>
+          <rect x="56.65" y="6.76" width="4.39" height="21.18"/>
+          <rect x="56.65" y=".08" width="4.39" height="3.47"/>
+          <rect x="87.12" y="6.76" width="4.39" height="21.18"/>
+          <rect x="87.12" y=".07" width="4.39" height="3.47"/>
+          <path d="M34.43,21.8c0,1.94-.79,2.69-2.83,2.69h-2.99c-2.04,0-2.83-.75-2.83-2.69l-.04-14.99h-4.27v15.7c0,3.69,1.86,5.41,5.74,5.41h5.79c3.87,0,5.74-1.72,5.74-5.41V6.82h-4.27l-.04,14.99Z"/>
+          <path d="M76.97,6.82h-5.79c-3.87,0-5.74,1.72-5.74,5.41v15.7h4.27l.04-14.99c0-1.94.79-2.69,2.83-2.69h2.99c2.04,0,2.83.75,2.83,2.69l.04,14.99h4.27v-15.7c0-3.69-1.86-5.41-5.74-5.41Z"/>
+          <path d="M126.68,6.77h-4.26l-.02,14.96c0,1.61-.44,2.71-2.85,2.71,0,0-3.01,0-3.36,0-1.78,0-2.47-.86-2.47-2.68l-.03-14.98h-4.27v15.7c0,.73.07,1.38.23,1.96.59,2.34,2.41,3.45,5.51,3.45h7.26v1.73c0,1.95-.48,3.17-3.23,3.17h-8.01v3.45h9.73c.55,0,1.05-.05,1.51-.14,3.19-.59,4.26-3.07,4.29-6.48v-1.73s-.03-21.11-.03-21.11Z"/>
+          <path d="M17.83,23.74v-11.5c0-3.7-1.8-5.46-5.61-5.46H1.51s0,3.45,0,3.45h9.3c2.01,0,2.83.75,2.83,2.69v2.73c-.28-.17-.75-.25-1.41-.25h-6.63c-.3,0-.6,0-.88.04-1.93.13-3.24.75-3.99,1.91-.53.81-.78,1.89-.78,3.26v1.87c0,3.74,1.8,5.46,5.65,5.46h7c.92,0,1.89-.53,2.39-1.44v1.44h2.89l-.04-4.2ZM13.64,21.91c0,.39-.03.72-.1,1.01-.27,1.12-1.07,1.57-2.73,1.57h-3.84c-2.05,0-2.79-.71-2.79-2.58v-.47c0-.85.16-1.47.53-1.89.42-.49,1.15-.7,2.26-.7h5.65c.49,0,.81.04,1.02.15v2.91Z"/>
+        </g>
+        <g>
+          <rect fill="#009df9" x="154.16" y="13.79" width="4.08" height="17.99" rx="2.02" ry="2.02" transform="translate(59.58 -102.04) rotate(43.96)"/>
+          <rect fill="#009df9" x="139.48" y="-.36" width="4.08" height="17.99" rx="2.02" ry="2.02" transform="translate(45.64 -95.82) rotate(43.96)"/>
+          <rect fill="#f13d65" x="146.82" y="-1.99" width="4.08" height="35.4" rx="2.02" ry="2.02" transform="translate(52.61 -98.93) rotate(43.96)"/>
+        </g>
+      </svg>
+    </a>
+    <span>© 2026 Aufinity Group GmbH</span>
+  </div>
+  <div class="footer__right">
+    <a href="https://www.hyundai.com/es/es/politica-privacidad.html">Privacy Policy</a>
+    <a href="https://www.hyundai.com/es/es/aviso-legal.html">Aviso Legal</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
+
+// Initialize Lenis Smooth Scroll
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// Link GSAP and Lenis
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000);
+});
+gsap.ticker.lagSmoothing(0, 0);
+
+// Loader
+window.addEventListener('load', () => {
+  gsap.to('#loader', {
+    yPercent: -100,
+    duration: 0.8,
+    ease: "power3.inOut",
+    delay: 0.2
+  });
+
+  initHeroAnimations();
+});
+
+// Header scroll effect
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('is-scrolled');
+  } else {
+    header.classList.remove('is-scrolled');
+  }
+});
+
+// Animations
+function initHeroAnimations() {
+  const tl = gsap.timeline({ defaults: { ease: "power4.out" }});
+  
+  tl.fromTo('.hero__image img', 
+    { scale: 1.15 }, 
+    { scale: 1, duration: 2 }
+  )
+  .fromTo('.hero__title .chars', 
+    { yPercent: 100 }, 
+    { yPercent: 0, duration: 1.2, stagger: 0.05 },
+    "-=1.5"
+  )
+  .fromTo('.hero__text-top', 
+    { opacity: 0, x: -20 }, 
+    { opacity: 1, x: 0, duration: 1 },
+    "-=1"
+  )
+  .fromTo('.hero__text-date, .hero__text-year', 
+    { opacity: 0, y: 20 }, 
+    { opacity: 1, y: 0, duration: 1, stagger: 0.2 },
+    "-=1"
+  );
+}
+
+// Parallax Images
+gsap.utils.toArray('.parallax-img').forEach(img => {
+  gsap.to(img, {
+    yPercent: 20,
+    ease: "none",
+    scrollTrigger: {
+      trigger: img.parentElement,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+});
+gsap.utils.toArray('.parallax-img-fast').forEach(img => {
+  gsap.to(img, {
+    yPercent: 40,
+    ease: "none",
+    scrollTrigger: {
+      trigger: img.parentElement,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+});
+gsap.utils.toArray('.parallax-img-slow').forEach(img => {
+  gsap.to(img, {
+    yPercent: 10,
+    ease: "none",
+    scrollTrigger: {
+      trigger: img.parentElement,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+});
+
+// Scroll Reveals
+gsap.utils.toArray('.gs-fade').forEach(el => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 30 },
+    {
+      opacity: 1, y: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%"
+      }
+    }
+  );
+});
+
+gsap.utils.toArray('.gs-fade-up').forEach((el, i) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1, y: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%"
+      }
+    }
+  );
+});
+
+// Lines animation
+gsap.utils.toArray('.gs-line').forEach(el => {
+  const line = el.querySelector('.agenda__line');
+  const lineBot = el.querySelector('.agenda__line-bottom');
+  if(line) {
+    gsap.to(line, {
+      scaleX: 1,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%"
+      }
+    });
+  }
+  if(lineBot) {
+    gsap.to(lineBot, {
+      scaleX: 1,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%"
+      }
+    });
+  }
+});
+
+// Form submission
+const form = document.getElementById('reg');
+const btn = document.getElementById('sbtn');
+const fok = document.getElementById('fok');
+
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    btn.disabled = true;
+    btn.innerHTML = '<span>Invio in corso...</span>';
+
+    setTimeout(() => {
+      form.classList.add('gone');
+      fok.style.display = 'block';
+      gsap.fromTo(fok, {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 0.5});
+    }, 1500);
+  });
+}
+
+// The Way SVG Animation
+const wayPaths = document.querySelectorAll('.way-svg path, .way-svg circle');
+if (wayPaths.length) {
+  wayPaths.forEach(el => {
+    const l = el.getTotalLength() + 10;
+    gsap.set(el, { strokeDasharray: l, strokeDashoffset: l + 5 });
+  });
+  
+  const tlWay = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".way-svg-wrapper",
+      start: "top 75%"
+    }
+  });
+
+  tlWay.to(wayPaths, {
+    strokeDashoffset: 0,
+    duration: 1.5,
+    ease: "power2.out"
+  })
+  .from('.way-svg text', {
+    opacity: 0,
+    y: 15,
+    duration: 0.8,
+    stagger: 0.1
+  }, "-=0.5");
+}
+
+// Blur Scroll Text Effect
+const blurTexts = document.querySelectorAll('.gs-blur-scroll');
+if (blurTexts.length) {
+  blurTexts.forEach(el => {
+    const text = el.innerText;
+    const words = text.split(' ');
+    el.innerHTML = '';
+    words.forEach(w => {
+      const span = document.createElement('span');
+      span.innerHTML = w + '&nbsp;';
+      span.style.display = 'inline-block';
+      span.style.willChange = 'filter, opacity, transform';
+      el.appendChild(span);
+    });
+    
+    gsap.fromTo(el.querySelectorAll('span'), 
+      { filter: 'blur(12px)', opacity: 0, y: 30 },
+      {
+        filter: 'blur(0px)', opacity: 1, y: 0,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: 1
+        }
+      }
+    );
+  });
+}
+
+</script>
+</body>
+</html>

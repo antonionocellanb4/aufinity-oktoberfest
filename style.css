@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-  --color-black: #0c0d10;      /* Aufinity Dark Background */
+  --color-black: #101114;      /* Aufinity Woodsmoke Background */
   --color-grey-100: #1a1b23;
   --color-grey-300: #2b2d38;
   --color-grey-400: #82869a;
@@ -9,6 +9,8 @@
   --color-white: #ffffff;
   --color-blue: #009df9;       /* Aufinity Blue */
   --color-pink: #f13d65;       /* Aufinity Pink */
+  --color-grey: #999999;
+  --color-concrete: #f2f2f2;
   
   --font-head: 'DM Sans', sans-serif;
   --font-text: 'DM Sans', sans-serif;
@@ -367,16 +369,16 @@ html{font-size:62.5%}
   opacity: 0.4;
   animation: orb-float 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 }
-.ambient-glow__orb--blue {
-  background: var(--color-blue);
+.ambient-glow__orb--grey {
+  background: var(--color-grey);
   width: 50vw;
   height: 50vh;
   top: -10vh;
   left: -10vw;
   animation-delay: 0s;
 }
-.ambient-glow__orb--pink {
-  background: var(--color-pink);
+.ambient-glow__orb--concrete {
+  background: var(--color-concrete);
   width: 45vw;
   height: 45vh;
   bottom: -10vh;
