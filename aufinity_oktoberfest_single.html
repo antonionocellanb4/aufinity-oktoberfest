@@ -177,6 +177,9 @@ html{font-size:62.5%}
 .agenda__line-bottom{position:absolute;bottom:0;left:0;width:100%;height:1px;background:rgba(255,255,255,.1);transform-origin:left;transform:scaleX(0)}
 .agenda__label{width:12rem;font-size:1.6rem;color:var(--color-grey-400);font-weight:500}
 .agenda__val{flex:1;font-size:2rem;font-weight:500;line-height:1.3;color:var(--color-white)}
+.agenda__val-desc { display: block; font-size: 1.6rem; font-weight: 400; color: var(--color-grey-400); margin-top: 0.5rem; line-height: 1.4; }
+.agenda__val a { color: var(--color-white); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s; }
+.agenda__val a:hover { color: var(--color-blue); }
 
 /* SENTENCE */
 .sentence{
@@ -616,12 +619,15 @@ html{font-size:62.5%}
         <div class="agenda__item gs-line">
           <div class="agenda__line"></div>
           <div class="agenda__label">Orario</div>
-          <div class="agenda__val">Dalle ore 16:00</div>
+          <div class="agenda__val">
+            Dalle ore 16:00
+            <span class="agenda__val-desc">Ritrovo presso il <a href="https://wirtshaus-am-bavariapark.com/" target="_blank" rel="noopener">Wirtshaus am Bavariapark</a> per un momento conviviale in autentica atmosfera bavarese, con drink e specialità locali.</span>
+          </div>
         </div>
         <div class="agenda__item gs-line">
           <div class="agenda__line"></div>
           <div class="agenda__label">Location</div>
-          <div class="agenda__val">Oktoberfest München<br>Theresienwiese, 80336 Monaco di Baviera</div>
+          <div class="agenda__val"><a href="https://www.mapquest.com/de/wirtshaus-am-bavariapark-525031058" target="_blank" rel="noopener">Theresienhöhe 15, Monaco di Baviera</a></div>
         </div>
         <div class="agenda__item gs-line">
           <div class="agenda__line"></div>
@@ -691,7 +697,7 @@ html{font-size:62.5%}
           <div class="huge-line2"><span class="t-blue">aspetta</span></div>
         </h2>
         <div class="logistics__right-col">
-          <p class="logistics__huge-desc"><strong>Ore 16.00</strong> - Ritrovo presso il <a href="https://wirtshaus-am-bavariapark.com/" target="_blank" rel="noopener noreferrer" style="color: var(--color-blue); text-decoration: none;">Wirtshaus am Bavariapark</a> per un momento conviviale in autentica atmosfera bavarese, con drink e specialità locali.</p>
+          <p class="logistics__huge-desc">Un momento di accoglienza a partire dalle ore 16:00, seguito dall'esperienza all'Oktoberfest insieme al team Aufinity Italia. Durante l'evento avrai l'opportunità di confrontarti con altri protagonisti del settore, rafforzare relazioni professionali e vivere una serata conviviale in uno dei contesti più riconoscibili al mondo.</p>
           <div class="logistics__note gs-fade">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="note-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
             <p>Le spese di viaggio sono a carico del partecipante.</p>
