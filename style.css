@@ -306,7 +306,8 @@ html{font-size:62.5%}
 .register__left{width:50%;padding:8rem 6rem;display:flex;flex-direction:column;justify-content:space-between}
 .register__title{font-size:5.6rem;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:2rem;color:var(--color-black)}
 .register__desc{font-size:1.8rem;color:var(--color-grey);line-height:1.4;margin-bottom:6rem;width:80%}
-.register__right{width:50%;position:relative;overflow:hidden;background:var(--color-blue);display:flex;align-items:flex-end;justify-content:flex-end;padding:8rem}
+.register__right{width:50%;position:relative;overflow:hidden;background:var(--color-blue);display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;padding:8rem}
+.register__deadline{font-size:2.4rem;font-weight:500;color:var(--color-white);text-align:right;margin-bottom:4rem}
 .register__arrow{width:250px;height:250px;color:var(--color-black);margin-bottom:2rem;transform:rotate(135deg);display:block;margin-left:auto}
 .register__overlay{text-align:right;z-index:2}
 .register__overlay p{font-size:3.2rem;font-weight:500;line-height:1.1;margin-bottom:1rem;color:var(--color-black)}
@@ -416,7 +417,7 @@ html{font-size:62.5%}
   .agenda__day{padding:4rem 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .agenda__day:first-child{border-right:none;border-bottom:none;padding-bottom:1rem}
   .agenda__day:last-child{border-bottom:none}
-  .register{flex-direction:column}
+  .register{flex-direction:column-reverse}
   .register__left, .register__right{width:100%;padding:4rem 2.4rem}
   .register__right{aspect-ratio:1/1}
   .footer{flex-direction:column;gap:3rem;text-align:center}
@@ -471,7 +472,9 @@ html{font-size:62.5%}
   
   .register__left{padding:6rem 2.4rem}
   .register__title{font-size:4rem}
-  .register__right{aspect-ratio:auto;padding:6rem 2.4rem;align-items:flex-start;justify-content:flex-end;flex-direction:column}
+  .register__desc{width:100%}
+  .register__right{aspect-ratio:auto;padding:6rem 2.4rem;align-items:flex-start;justify-content:space-between;flex-direction:column}
+  .register__deadline{font-size:2rem;text-align:left;margin-bottom:6rem}
   .register__arrow{width:150px;height:150px;margin-left:0;margin-bottom:2rem}
   .register__overlay{text-align:left}
 }
