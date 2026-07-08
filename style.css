@@ -414,7 +414,7 @@ html{font-size:62.5%}
   .destination__left, .destination__right{width:100%;margin-top:3rem}
   .agenda__content{flex-direction:column;padding:4rem 2.4rem;border-radius:2rem}
   .agenda__day{padding:4rem 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .agenda__day:first-child{border-right:none}
+  .agenda__day:first-child{border-right:none;border-bottom:none;padding-bottom:1rem}
   .agenda__day:last-child{border-bottom:none}
   .register{flex-direction:column}
   .register__left, .register__right{width:100%;padding:4rem 2.4rem}
