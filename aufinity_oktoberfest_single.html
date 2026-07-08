@@ -314,13 +314,13 @@ html{font-size:62.5%}
 .logistics__huge-desc{font-size:2.4rem;line-height:1.4;color:var(--color-grey-700);max-width:none}
 
 /* REGISTER */
-.register{display:flex;flex-wrap:wrap;background:var(--color-white)}
-.register__left{width:50%;padding:8rem 6rem;display:flex;flex-direction:column;justify-content:space-between}
-.register__title{font-size:5.6rem;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:2rem;color:var(--color-black)}
-.register__desc{font-size:1.8rem;color:var(--color-grey);line-height:1.4;margin-bottom:6rem;width:80%}
-.register__right{width:50%;position:relative;overflow:hidden;background:radial-gradient(circle at top left, rgba(0, 163, 255, 0.4) 0%, var(--color-bg) 80%);display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;padding:8rem}
+.register{display:flex;flex-wrap:wrap;background:transparent;max-width:1400px;margin:0 auto;padding:10rem 2.4rem;gap:6rem}
+.register__left{flex:1;min-width:300px;display:flex;flex-direction:column;justify-content:flex-start}
+.register__title{font-size:5.6rem;font-weight:500;line-height:1;letter-spacing:-.02em;margin-bottom:2rem;color:var(--color-white)}
+.register__desc{font-size:1.8rem;color:var(--color-grey-400);line-height:1.4;margin-bottom:6rem;width:80%}
+.register__right{flex:1;min-width:300px;border-radius:3rem;background:rgba(255,255,255,.03);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;padding:6rem}
 .register__deadline{font-size:2.4rem;font-weight:500;color:var(--color-white);text-align:right;margin-bottom:4rem}
-.register__arrow{width:250px;height:250px;color:var(--color-white);margin-bottom:2rem;transform:rotate(135deg);display:block;margin-left:auto}
+.register__arrow{width:200px;height:200px;color:var(--color-white);margin-bottom:2rem;transform:rotate(135deg);display:block;margin-left:auto}
 .register__overlay{text-align:right;z-index:2}
 .register__overlay p{font-size:3.2rem;font-weight:500;line-height:1.1;margin-bottom:1rem;color:var(--color-white)}
 .register__overlay span{font-size:1.6rem;color:var(--color-grey-400);font-weight:500}
@@ -329,31 +329,31 @@ html{font-size:62.5%}
 .form-grid{display:flex;flex-direction:column;gap:2rem;margin-bottom:3rem}
 .input-line{position:relative}
 .input-line input, .input-line textarea{
-  width:100%;padding:1.5rem 0;font-size:1.8rem;color:var(--color-black);
-  border-bottom:1px solid rgba(0,0,0,.2);transition:border-color .3s;
+  width:100%;padding:1.5rem 0;font-size:1.8rem;color:var(--color-white);background:transparent;
+  border:none;border-bottom:1px solid rgba(255,255,255,.2);transition:border-color .3s;outline:none;
 }
-.input-line input::placeholder, .input-line textarea::placeholder{color:var(--color-grey-400)}
+.input-line input::placeholder, .input-line textarea::placeholder{color:rgba(255,255,255,.4)}
 .input-line input:focus, .input-line textarea:focus{border-color:var(--color-blue)}
 .input-line textarea{resize:vertical;min-height:40px}
-.input-radio{padding:1.5rem 0;border-bottom:1px solid rgba(0,0,0,.2);display:flex;align-items:center;justify-content:space-between}
-.input-radio label{font-size:1.8rem;color:var(--color-black)}
+.input-radio{padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:space-between}
+.input-radio label{font-size:1.8rem;color:var(--color-white)}
 .radio-group{display:flex;gap:2rem}
-.radio-group label{color:var(--color-black);display:flex;align-items:center;gap:1rem;cursor:pointer}
+.radio-group label{color:var(--color-white);display:flex;align-items:center;gap:1rem;cursor:pointer}
 .radio-group input{accent-color:var(--color-blue);width:1.8rem;height:1.8rem}
 .form-check{display:flex;align-items:flex-start;gap:1.5rem;cursor:pointer;margin-bottom:4rem}
 .form-check input{display:none}
 .check-box{
-  width:2rem;height:2rem;border:1px solid rgba(0,0,0,.3);flex-shrink:0;
+  width:2rem;height:2rem;border:1px solid rgba(255,255,255,.3);flex-shrink:0;
   display:flex;align-items:center;justify-content:center;transition:all .3s;
 }
 .form-check input:checked + .check-box{background:var(--color-blue);border-color:var(--color-blue)}
 .form-check input:checked + .check-box::after{content:'✓';font-size:1.2rem;color:#fff}
-.check-lbl{font-size:1.4rem;color:var(--color-grey-700);line-height:1.4}
+.check-lbl{font-size:1.4rem;color:var(--color-grey-400);line-height:1.4}
 .form-btn{
-  display:inline-flex;padding:2rem 4rem;background:var(--color-black);color:var(--color-white);
-  font-size:1.6rem;font-weight:600;cursor:pointer;transition:transform .3s;
+  display:inline-flex;padding:2rem 4rem;background:var(--color-blue);color:var(--color-white);
+  font-size:1.6rem;font-weight:600;cursor:pointer;transition:transform .3s;border:none;border-radius:3rem;
 }
-.form-btn:hover{transform:translateY(-2px);background:var(--color-blue)}
+.form-btn:hover{transform:translateY(-2px);background:var(--color-white);color:var(--color-black)}
 .form-ok{display:none;padding:4rem 0;text-align:center}
 .form-ok h3{font-size:3.2rem;color:var(--color-blue);margin-bottom:1rem}
 .form-ok p{font-size:1.8rem;color:var(--color-grey-400)}
@@ -429,9 +429,9 @@ html{font-size:62.5%}
   .agenda__day{padding:4rem 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .agenda__day:first-child{border-right:none;border-bottom:none;padding-bottom:1rem}
   .agenda__day:last-child{border-bottom:none}
-  .register{flex-direction:column-reverse}
-  .register__left, .register__right{width:100%;padding:4rem 2.4rem}
-  .register__right{aspect-ratio:1/1}
+  .register{flex-direction:column-reverse;padding:6rem 2.4rem;gap:4rem}
+  .register__left, .register__right{width:100%;padding:0}
+  .register__right{aspect-ratio:1/1;padding:4rem}
   .footer{flex-direction:column;gap:3rem;text-align:center}
 }
 
@@ -482,10 +482,10 @@ html{font-size:62.5%}
   .logistics__huge-title .huge-line2{transform:translateX(0)}
   .logistics__huge-desc{font-size:2rem}
   
-  .register__left{padding:6rem 2.4rem}
+  .register__left{padding:0}
   .register__title{font-size:4rem}
   .register__desc{width:100%}
-  .register__right{aspect-ratio:auto;padding:6rem 2.4rem;align-items:flex-start;justify-content:space-between;flex-direction:column}
+  .register__right{aspect-ratio:auto;padding:4rem 2.4rem;align-items:flex-start;justify-content:space-between;flex-direction:column}
   .register__deadline{font-size:2rem;text-align:left;margin-bottom:6rem}
   .register__arrow{width:150px;height:150px;margin-left:0;margin-bottom:2rem}
   .register__overlay{text-align:left}
