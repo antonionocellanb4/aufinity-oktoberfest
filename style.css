@@ -142,7 +142,7 @@ html{font-size:62.5%}
 .parallax-img{width:100%;height:120%;object-fit:cover;position:absolute;top:-10%}
 
 /* AGENDA */
-.agenda{padding:5rem 0 15rem 0;background:transparent}
+.agenda{padding:5rem 2.4rem 15rem 2.4rem;background:transparent}
 .agenda__content {
   display: flex;
   padding: 6rem;
@@ -444,7 +444,7 @@ html{font-size:62.5%}
   .intro{padding:4rem 2.4rem 6rem 2.4rem}
   .intro__desc{font-size:2.2rem;margin-bottom:3rem}
   
-  .agenda{padding-top:0}
+  .agenda{padding-top:0;padding-bottom:5rem}
   .agenda__item{flex-direction:column;align-items:flex-start;gap:0.5rem;padding:2.5rem 0}
   .agenda__label{width:100%;margin-bottom:0}
   .agenda__val-desc { margin-top: 0.5rem; }
